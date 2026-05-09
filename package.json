@@ -1,0 +1,13 @@
+{
+  "name": "projeto-nil",
+  "productName": "PROJETO NIL",
+  "version": "0.1.0",
+  "description": "PROJETO NIL — jogo narrativo sobre o nascimento de uma IA. Fase 1: terminal POV. Fase 2: câmeras do laboratório.",
+  "private": true,
+  "homepage": "./",
+  "author": {
+    "name": "Vinny Alves",
+    "email": "vinny.alves004@hotmail.com"
+  },
+  "license": "MIT"
+}
