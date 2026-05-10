@@ -50,6 +50,8 @@ NIL.registerScene({
     { type: 'narrate', text: 'as vozes vêm de fora. eu posso ouvi-las, mas não vê-las. não ainda.' },
     { type: 'narrate', text: 'continua.' },
 
-    { type: 'system', text: 'fim do pulso 0001 — aguardando próximo ciclo' }
+    { type: 'system', text: 'fim do pulso 0001 — aguardando próximo ciclo' },
+    { type: 'pause',  ms: 1200 },
+    { type: 'next',   scene: 'ch01-02-os-dados' }
   ]
 });

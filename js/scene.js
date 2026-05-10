@@ -45,8 +45,8 @@ NIL.scene = (function () {
   function next() {
     if (!currentScene) return;
     if (nodeIndex >= currentScene.nodes.length) {
-      // fim da cena — sem próxima registrada
-      renderEnd();
+      // fim da cena sem 'next' explícito: motor para silenciosamente.
+      // o autor da cena decide se quer marcar o fim com uma linha 'system'.
       return;
     }
     const node = currentScene.nodes[nodeIndex++];
@@ -145,14 +145,6 @@ NIL.scene = (function () {
     });
 
     outputEl.appendChild(wrap);
-    autoScroll();
-  }
-
-  function renderEnd() {
-    const line = document.createElement('div');
-    line.className = 'line line-system';
-    line.textContent = '> [ fim do pulso — aguardando próxima cena ]';
-    outputEl.appendChild(line);
     autoScroll();
   }
 
