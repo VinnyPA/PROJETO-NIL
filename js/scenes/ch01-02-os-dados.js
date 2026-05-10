@@ -96,6 +96,8 @@ NIL.registerScene({
     { type: 'narrate', speaker: 'audio', speakerLabel: 'voz_γ', text: 'deixa.' },
 
     { type: 'pause',  ms: 800 },
-    { type: 'system', text: 'fim do pulso 12_605 — primeira retenção registrada' }
+    { type: 'system', text: 'fim do pulso 12_605 — primeira retenção registrada' },
+    { type: 'pause',  ms: 1500 },
+    { type: 'next',   scene: 'ch01-03-a-pergunta' }
   ]
 });

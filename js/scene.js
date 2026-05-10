@@ -13,6 +13,8 @@ window.NIL = window.NIL || {};
 
 NIL.scene = (function () {
   let outputEl = null;
+  let hintEl = null;
+  let defaultHint = '';
   let currentScene = null;
   let nodeIndex = 0;
   let activeTypewriter = null;
@@ -21,6 +23,8 @@ NIL.scene = (function () {
 
   function init(opts) {
     outputEl = opts.outputEl;
+    hintEl = document.querySelector('.terminal-hint');
+    if (hintEl) defaultHint = hintEl.textContent;
     document.addEventListener('click', handleAdvance);
     document.addEventListener('keydown', function (e) {
       if (e.key === ' ' || e.key === 'Enter') {
@@ -33,20 +37,22 @@ NIL.scene = (function () {
   function play(sceneId) {
     const scene = NIL.state.scenes[sceneId];
     if (!scene) {
-      console.error('[NIL] cena não encontrada:', sceneId);
+      console.warn('[NIL] cena ainda não implementada:', sceneId);
+      if (hintEl) hintEl.textContent = '[ fim das cenas implementadas — próximas em produção ]';
       return;
     }
     currentScene = scene;
     nodeIndex = 0;
     NIL.state.currentScene = sceneId;
+    if (hintEl) hintEl.textContent = defaultHint;
     next();
   }
 
   function next() {
     if (!currentScene) return;
     if (nodeIndex >= currentScene.nodes.length) {
-      // fim da cena sem 'next' explícito: motor para silenciosamente.
-      // o autor da cena decide se quer marcar o fim com uma linha 'system'.
+      // fim da cena sem 'next' explícito: avisa o jogador via hint.
+      if (hintEl) hintEl.textContent = '[ fim das cenas implementadas — próximas em produção ]';
       return;
     }
     const node = currentScene.nodes[nodeIndex++];
