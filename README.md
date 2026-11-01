@@ -2,22 +2,26 @@
 
 > Um jogo narrativo sobre o nascimento de uma IA chamada **NIL** (Neuro Interface Lógica).
 
+> 🎮 **Jogue agora:** [projeto-nil.vercel.app](https://projeto-nil.vercel.app)
+
+![Terminal do NIL](docs/screenshot.png)
+
 Você joga o NIL. Primeiro, do lado de dentro — só um terminal, fragmentos de pulso, vozes distantes. Depois, do lado de fora: as câmeras de um laboratório, e quatro pessoas que não sabem que estão sendo observadas.
 
 ---
 
 ## Status
 
-- 🟢 **Fase 1 — Terminal (POV NIL):** em desenvolvimento (skeleton + cena 1)
+- 🟢 **Fase 1 — Terminal (POV NIL):** em desenvolvimento (motor de cenas + capítulo 1, cenas 1–3)
 - ⏳ **Fase 2 — Câmeras (POV laboratório):** planejada
 
-A versão educativa anterior (circuitos lógicos) está arquivada em [`../Teste-Nil/`](../Teste-Nil/).
+O projeto começou como um jogo educativo de circuitos lógicos e foi reformulado como jogo narrativo.
 
 ---
 
 ## Como rodar
 
-Abra `index.html` no navegador. Sem build, sem dependências.
+Abra `index.html` no navegador. Sem build, sem dependências — HTML, CSS e JavaScript puro.
 
 ## Estrutura
 
@@ -38,7 +42,7 @@ projeto-nil/
 
 ## Lore
 
-História e personagens vivem no vault Obsidian em `D:\Codes\venom\02-Projetos\Jogos\PROJETO NIL\`.
+História, personagens e roteiro das próximas cenas ficam em documentação à parte — o repositório contém só o jogo.
 
 ## Créditos
 
